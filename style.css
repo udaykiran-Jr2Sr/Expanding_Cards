@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Proza+Libre:wght@600&display=swap");
+
+body {
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #caedff;
+  font-family: "Proza Libre", sans-serif;
+  font-size: 1.7rem;
+  color: #3840ab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 70vh;
+  gap: 15px;
+}
+
+.container > * {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 70px;
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container > div > p {
+  display: inline-block;
+  position: absolute;
+  top: 90%;
+  left: 20%;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 5px black;
+  font-family: "Roboto", "Helvetica Neue";
+  visibility: hidden;
+}
