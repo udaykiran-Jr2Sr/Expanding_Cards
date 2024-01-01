@@ -49,3 +49,7 @@ body {
   font-family: "Roboto", "Helvetica Neue";
   visibility: hidden;
 }
+
+.active{
+  flex: 9;
+}
