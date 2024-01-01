@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Proza+Libre:wght@600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 body {
   margin: 0px;
   display: flex;
@@ -26,8 +26,18 @@ body {
   height: 70vh;
   gap: 15px;
 }
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 70vh;
+    gap: 15px;
+  }
+}
 
-.container > * { 
+.container > * {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -36,21 +46,30 @@ body {
   flex: 1;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  transition: ease-in .8s;
+  transition: ease-in 0.8s;
 }
+
+
 
 .container > div > p {
   display: inline-block;
   position: absolute;
-  top: 90%;
-  left: 20%;
+  top: 78%;
+  left: 5%;
   color: whitesmoke;
-  font-size: 1.2rem;
-  text-shadow: 2px 2px 5px black;
-  font-family: "Roboto", "Helvetica Neue";
+  font-size: 2rem;
+  text-shadow: 2px 2px 7px black;
+  font-family: "Raleway", sans-serif;
+  color: #d2d4f0;
   visibility: hidden;
 }
 
-.active{
+.active {
   flex: 9;
+}
+
+/* for that cool transition */
+.panel.active p {
+  opacity: 0.8;
+  transition: opacity 5s ease-in;
 }
