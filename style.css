@@ -9,10 +9,7 @@ body {
   justify-content: center;
   height: 100vh;
   overflow: hidden;
-  background-color: #caedff;
-  font-family: "Proza Libre", sans-serif;
-  font-size: 1.7rem;
-  color: #3840ab;
+  background-color: rgb(16, 16, 16);
 }
 
 * {
@@ -22,8 +19,8 @@ body {
 .container {
   display: flex;
   justify-content: center;
-  width: 80%;
-  height: 70vh;
+  width: 70%;
+  height: 80vh;
   gap: 15px;
 }
 @media (max-width: 700px) {
@@ -34,6 +31,7 @@ body {
     width: 80%;
     height: 70vh;
     gap: 15px;
+    overflow: visible;
   }
 }
 
@@ -45,31 +43,31 @@ body {
   position: relative;
   flex: 1;
   cursor: pointer;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: ease-in 0.8s;
+  border: 5px solid whitesmoke;
+}
+.container > *:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 10px 10px 10px rgba(254, 254, 254, 0.4);
 }
 
-
-
-.container > div > p {
-  display: inline-block;
-  position: absolute;
-  top: 78%;
-  left: 5%;
-  color: whitesmoke;
+.panel p {
   font-size: 2rem;
-  text-shadow: 2px 2px 7px black;
+  color: whitesmoke;
+  bottom: 15px;
   font-family: "Raleway", sans-serif;
-  color: #d2d4f0;
-  visibility: hidden;
+  left: 20px;
+  position: absolute;
+  opacity: 0;
+  text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
 }
 
-.active {
+.panel.active {
   flex: 9;
 }
 
 /* for that cool transition */
 .panel.active p {
-  opacity: 0.8;
-  transition: opacity 5s ease-in;
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
